@@ -4,7 +4,7 @@
 
 
 
-## Chapter 1 T-SQL Parsing Example (Basic)
+## Chapter 1 T-SQL Parsing Examples (Basic)
 ### 1. INSERT / INSERT INTO
 
 ~~~sql
@@ -20,8 +20,6 @@ INSERT INTO dbo.EmployeeSales
 ![INSERT](/imgs/Insert_into.png)
 
 ### 2. SELECT INTO
-
-
 
 ~~~sql
 SELECT c.FirstName, c.LastName, e.JobTitle, a.AddressLine1, a.City,   
@@ -114,11 +112,11 @@ WHERE edh.EndDate IS NULL
 
 ![Create_view](/imgs/Create_view.png)
 
-### 6. MERGE ... USING ... (TODO)
+### 6. MERGE ... USING ... (TBD)
 
 
 
-##  Chapter 2 T-SQL Parsing Example (Advanced)
+##  Chapter 2 T-SQL Parsing Examples (Advanced)
 ### 1. Complex Stored Procedure
 
 ~~~sql
@@ -291,7 +289,7 @@ FROM Production.Product
 WHERE ProductSubcategoryID = 1;
 ~~~
 
-![scalar_subquery_exp](C:\SourceCode\ADO\LineageWebParser\parser-react-web\src\docs\imgs\scalar_subquery_exp.png)
+![scalar_subquery_exp](/imgs/scalar_subquery_exp.png)
 
 
 
@@ -388,9 +386,11 @@ FROM   A
 
 
 
-##  Chapter 3 Implicit Inferring  
+##  Chapter 3 Implicit Inferring  Columns
 
-Assuming we've had metadata of a database, which contains all table/column metadata information we will use in our scripts. That is the prerequisites for column inferring when we come across scripts like 'select *' , 'insert into table' without specified columns or select multiply columns from two or more tables without table or table alias decorated.    
+Assuming we've had metadata of a database, which contains all table/column metadata information we will use in our scripts. That is the prerequisites for column inferring when we come across scripts like 'select *' , 'insert into {table}' without specified columns or select multiply columns from two or more tables without table or table alias decorated.    
+
+假设我们已经具备了某个数据库的元数据， 包括了所有的将会在脚本中用到的表、列元数据信息。这是我们做隐式列名推断的前提条件。 这样当我们遇到像 "select * ", "insert into {table}"但不指定列，以及从多个表SELECT多个列但不加表名限定的时候， 能够推测出准确的血缘关系。
 
 ### 1. SELECT *
 
