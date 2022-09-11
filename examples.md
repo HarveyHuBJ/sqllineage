@@ -17,7 +17,7 @@ INSERT INTO dbo.EmployeeSales
     ORDER BY sp.BusinessEntityID, c.LastName;  
 ~~~
 
-![INSERT](.\imgs\Insert_into.png)
+![INSERT](/imgs/Insert_into.png)
 
 ### 2. SELECT INTO
 
@@ -39,7 +39,7 @@ FROM Person.Person AS c
 GO  
 ~~~
 
-![INSERT_INTO](.\imgs\Select_into.png)
+![INSERT_INTO](/imgs/Select_into.png)
 
 ### 3. UPDATE
 
@@ -60,7 +60,7 @@ FROM   sc1.my_table1
               ON b.date = c.datevalue 
 ~~~
 
-![Update](.\imgs\Update.png)
+![Update](/imgs/Update.png)
 
 ### 4. CTAS (CREATE TABLE AS SELECT)
 
@@ -82,7 +82,7 @@ SELECT
 FROM [dbo].[DimCustomer2]  
 ~~~
 
-![CTAS](.\imgs\CTAS.PNG)
+![CTAS](/imgs/CTAS.PNG)
 
 ### 5. CREATE VIEW
 
@@ -112,7 +112,7 @@ WHERE edh.EndDate IS NULL
 
 ~~~
 
-![Create_view](.\imgs\Create_view.png)
+![Create_view](/imgs/Create_view.png)
 
 ### 6. MERGE ... USING ... (TODO)
 
@@ -158,7 +158,7 @@ BEGIN
 END;
 ~~~
 
-![Complex_stored_procedure](.\imgs\Complex_stored_procedure.png)
+![Complex_stored_procedure](/imgs/Complex_stored_procedure.png)
 
 ### 2. Table Joins
 
@@ -187,7 +187,7 @@ FROM [Sales].[Store] s
     ON at.[AddressTypeID] = bea.[AddressTypeID];
 ~~~
 
-![Table_joins](.\imgs\Table_joins.png)
+![Table_joins](/imgs/Table_joins.png)
 
 ### 3. CTE or SubQuery
 
@@ -208,7 +208,7 @@ FROM Parts AS p
 ORDER BY ComponentLevel, AssemblyID, ComponentID;
 ~~~
 
-![CTE](.\imgs\cte.png)
+![CTE](/imgs/cte.png)
 
 * Another one:
 
@@ -228,7 +228,7 @@ FROM
 ORDER BY ComponentLevel, AssemblyID, ComponentID;
 ~~~
 
-![subquery](.\imgs\subquery.png)
+![subquery](/imgs/subquery.png)
 
 
 
@@ -264,7 +264,7 @@ ORDER BY ComponentLevel, AssemblyID, ComponentID;
 
 
 
-![Union_all](.\imgs\Union_all.png)
+![Union_all](/imgs/Union_all.png)
 
 ### 5. Scalar Subquery
 
@@ -277,7 +277,7 @@ INTO tgt.SalesOrderHeader
 FROM Sales.SalesOrderHeader AS Ord;
 ~~~
 
-![scalar_subquery](.\imgs\scalar_subquery.png)
+![scalar_subquery](/imgs/scalar_subquery.png)
 
 * Another one:
 
@@ -332,7 +332,7 @@ PIVOT
 ) AS pvt;
 ~~~
 
-![Pivot](.\imgs\Pivot.png)
+![Pivot](/imgs/Pivot.png)
 
 ### 7. UNPIVOT
 
@@ -354,7 +354,7 @@ UNPIVOT
 
 ~~~
 
-![Unpivot](.\imgs\Unpivot.png)
+![Unpivot](/imgs/Unpivot.png)
 
 
 
@@ -369,7 +369,7 @@ FROM dbo.Product a
 
 
 
-![String_split](.\imgs\String_split.png)
+![String_split](/imgs/String_split.png)
 
 ### 9. Cross Apply
 
@@ -384,7 +384,7 @@ FROM   A
   ) T
 ~~~
 
-![Cross_apply](.\imgs\Cross_apply.png)
+![Cross_apply](/imgs/Cross_apply.png)
 
 
 
@@ -403,7 +403,7 @@ insert into tgt2
 select * from Sales.Currency
 ~~~
 
-![INFER_SELECT_STAR](.\imgs\INFER_SELECT_STAR)
+![INFER_SELECT_STAR](/imgs/INFER_SELECT_STAR)
 
 ### 2. INSERT INTO {TABLE} 
 
@@ -413,7 +413,7 @@ SELECT cur_code, cur_name, date
 from dbo.src_currency
 ~~~
 
-![INFER_INSERT_UNSPECIFICED](.\imgs\INFER_INSERT_UNSPECIFICED.PNG)
+![INFER_INSERT_UNSPECIFICED](/imgs/INFER_INSERT_UNSPECIFICED.PNG)
 
 ### 3. SELECT Undecorated Columns FROM Multiple Tables
 
@@ -425,6 +425,6 @@ from dbo.src_currency
    WHERE A.FromCurrencyCode='USD' AND a.ModifiedDate = '2011-05-31 00:00:00.000'
  ~~~
 
-![INFER_MULTIPLE_TABLES](.\imgs\INFER_MULTIPLE_TABLES.png)
+![INFER_MULTIPLE_TABLES](/imgs/INFER_MULTIPLE_TABLES.png)
 
 ##  Chapter 4 PowerQuery Parsing Example(TODO)
